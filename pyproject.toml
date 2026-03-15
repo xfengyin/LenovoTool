@@ -1,0 +1,14 @@
+[project]
+name = "lenovotool"
+version = "0.1.0"
+description = "LenovoTool - 笔记本电脑电池监控工具"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.100.0",
+    "pydantic>=2.0.0",
+    "uvicorn>=0.23.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
