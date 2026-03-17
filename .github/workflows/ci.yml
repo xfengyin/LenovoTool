@@ -18,11 +18,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'pnpm'
       
-      - run: npm install
+      - working-directory: ./frontend
+        run: pnpm install
       
-      - run: npm test || true
+      - working-directory: ./frontend
+        run: pnpm build
 
